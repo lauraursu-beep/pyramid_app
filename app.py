@@ -1,6 +1,10 @@
 from wsgiref.simple_server import make_server
-from pyramid.config import Configurator # pyright: ignore[reportMissingImports]
+from pyramid.config import Configurator #pyright: ignore[reportMissingImports]
 from pyramid.view import view_config # pyright: ignore[reportMissingImports]    
+import psycopg # pyright: ignore[reportMissingImports]    
+
+def create_db_connection():
+    pass
 
 @view_config(route_name='index', renderer='templates/index.jinja2')
 def index(request):
